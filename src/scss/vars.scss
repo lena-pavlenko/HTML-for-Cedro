@@ -1,0 +1,10 @@
+$mainTextColor: #21242E;
+$accentColor: #D0BC7A;
+
+@mixin menuBtnLines {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: $mainTextColor;
+}
