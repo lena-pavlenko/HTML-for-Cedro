@@ -1,0 +1,36 @@
+.profile-info {
+  border-bottom: $border;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 235px 1fr;
+    height: 100%;
+  }
+}
+
+.profile-section {
+  padding: 32px 0 0;
+  
+
+  &__block {
+    padding: 80px 0 80px 96px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      border-bottom: $border;
+      left: 0;
+      width: 100vw;
+    }
+
+    &:last-child {
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+}

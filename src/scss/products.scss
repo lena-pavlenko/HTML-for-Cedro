@@ -1,0 +1,55 @@
+.products {
+  padding: 112px 0;
+
+  &__content {
+    padding-left: 43px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 48px;
+  }
+}
+
+.link-next {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  stroke: $mainTextColor;
+  transition: all ease .3s;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1.5px solid $mainTextColor;
+
+    svg {
+      margin-left: 1px;
+    }
+  }
+
+  &:hover {
+    color: $accentColor;
+    stroke: $accentColor;
+
+    span {
+      border-color: $accentColor;
+    }
+  }
+}
+
+.product-card {
+  border-radius: 8px;
+  background: #f7f7f7;
+}

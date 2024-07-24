@@ -16,6 +16,8 @@ body {
   font-weight: 500;
   color: $mainTextColor;
   font-size: 16px;
+  overflow-x: hidden;
+  min-width: 320px;
 }
 
 .wrapper {
@@ -26,12 +28,6 @@ body {
 
 .main {
   flex-grow: 1;
-  
-  &__content {
-    display: grid;
-    grid-template-columns: 235px 1fr;
-    height: 100%;
-  }
 }
 
 .container {
@@ -63,10 +59,9 @@ body {
   width: 100%;
   height: 100%;
 }
-
-.title-block {
-  padding: 112px 0 80px 96px;
-  border-bottom: $border;
+.shevron-icon {
+  width: 5px;
+  height: 8px;
 }
 
 .title {
@@ -79,6 +74,20 @@ body {
     font-size: 80px;
   }
 }
+
+.section-title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  &__color {
+    color: $accentColor;
+  }
+}
+
+
 
 .button {
   padding: 0;

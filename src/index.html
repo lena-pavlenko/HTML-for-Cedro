@@ -39,60 +39,116 @@
       </div>
     </header>
     <main class="main">
-      <div class="container">
-        <div class="main__content">
 
-          <aside class="aside-menu">
-            <div class="aside-menu__list">
-              <a href="#" class="aside-menu__link aside-menu__link_current">Профиль</a>
-              <a href="#" class="aside-menu__link">Мои заказы</a>
-              <a href="#" class="aside-menu__link">выход</a>
+      <section class="profile-info">
+        <div class="container">
+
+          <div class="profile-info__row">
+
+            <div class="aside-menu">
+              <div class="aside-menu__list">
+                <a href="#" class="aside-menu__link aside-menu__link_current">Профиль</a>
+                <a href="#" class="aside-menu__link">Мои заказы</a>
+                <a href="#" class="aside-menu__link">выход</a>
+              </div>
             </div>
-          </aside>
-
-          <section class="profile-section">
-
-            <div class="profile-section__block">
-              <h1 class="title title_h1">Профиль</h1>
+    
+            <div class="profile-section">
+    
+              <div class="profile-section__block">
+                <h1 class="title title_h1">Профиль</h1>
+              </div>
+    
+              <div class="profile-section__block">
+                <form method="post" class="form-block">
+    
+                  <div class="form-block__title">Данные профиля</div>
+    
+                  <fieldset class="form-field">
+                    <label for="userFio" class="form-field__label">ФИО</label>
+                    <input type="text" class="form-field__input" id="userFio" name="fio" placeholder="Алексеева Ульяна Евгеньевна">
+                  </fieldset>
+    
+                  <fieldset class="form-field">
+                    <label for="userMail" class="form-field__label">Почта</label>
+                    <input type="email" class="form-field__input" id="userMail" name="mail" placeholder="+7 (999) 999-99-99">
+                  </fieldset>
+    
+                  <fieldset class="form-field">
+                    <label for="userPhone" class="form-field__label">Телефон</label>
+                    <input type="tel" class="form-field__input" id="userPhone" name="phone" placeholder="pochta07@mail.ru">
+                  </fieldset>
+    
+                </form>
+              </div>
+    
+              <div class="profile-section__block">
+                <button class="button" type="button">Сохранить изменения</button>
+              </div>
+    
             </div>
 
-            <div class="profile-section__block">
-              
-              <form method="post" class="form-block">
-
-                <h2 class="form-block__title">Данные профиля</h2>
-
-                <fieldset class="form-field">
-                  <label for="userFio" class="form-field__label">ФИО</label>
-                  <input type="text" class="form-field__input" id="userFio" name="fio" placeholder="Алексеева Ульяна Евгеньевна">
-                </fieldset>
-
-                <fieldset class="form-field">
-                  <label for="userMail" class="form-field__label">Почта</label>
-                  <input type="email" class="form-field__input" id="userMail" name="mail" placeholder="+7 (999) 999-99-99">
-                </fieldset>
-
-                <fieldset class="form-field">
-                  <label for="userMaPhone" class="form-field__label">Телефон</label>
-                  <input type="tel" class="form-field__input" id="userPhone" name="phone" placeholder="pochta07@mail.ru">
-                </fieldset>
-
-              </form>
-
-            </div>
-
-            <div class="profile-section__block">
-              <button class="button" type="button">Сохранить изменения</button>
-            </div>
-
-          </section>
+          </div>
         </div>
-        
-      </div>
-      
+      </section>
+
+      <section class="products">
+        <div class="container">
+          <div class="products__content">
+
+            <div class="products__row">
+              <h2 class="section-title">
+                <span class="section-title__color">Тренды</span> сезона
+              </h2>
+              <a href="#" class="link-next">
+                Перейти в каталог
+                <span>
+                  <svg class="icon shevron-icon">
+                    <use id="shevronIcon" xlink:href="./img/icons/sprite.svg#ic_shevron"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <div class="swiper swiper-products">
+              <div class="swiper-wrapper">
+                <article href="#" class="swiper-slide product-card">
+
+                  <div class="product-card__top">
+
+                    <div class="product-card__actions">
+                      <div class="product-card__label">Sale</div>
+                      <button class="product-card__favorite" type="button" aria-label="Добавить товар в избранное.">
+                        <svg class="icon heart-solid-icon">
+                          <use id="solidHeartIcon" xlink:href="./img/icons/sprite.svg#ic_solid_heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    
+                    <div class="product-card__image">
+                      <img src="./img/product.png" alt="Brown to Blonde. Пигмент для бровей.">
+                    </div>
+                  </div>
+                  <div class="product-card__bottom">
+                    <div class="product-card__info">
+                      <h3 class="product-card__title">Brown to Blonde</h3>
+                      <p class="product-card__desc">Пигмент для бровей</p>
+                      <p class="product-card__more">12 ml.</p>
+                    </div>
+                    <div class="product-card__price">
+                      <div class="product-card__price-now">1 500 ₽</div>
+                      <div class="product-card__price-old">3 000 ₽</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </div>
+  <script src="js/libs/swiper-bundle.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

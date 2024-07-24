@@ -34,11 +34,23 @@ const paths = {
   ico: {
     src: '*.ico',
     dest: 'dist/'
-  }
+  },
+  libs: {
+    src: 'src/js/**/*.js',
+    dest: 'dist/js/libs/'
+  },
 }
+
 function ico() {
   return gulp.src(paths.ico.src)
     .pipe(gulp.dest(paths.ico.dest));
+}
+
+function libs() {
+  return gulp.src("./node_modules/swiper/swiper-bundle.js")
+    .pipe(gulp.dest(paths.libs.dest))
+    .pipe(concat('libs.js'))
+    .pipe(browsersync.stream());
 }
 
 function html() {
@@ -109,6 +121,7 @@ function watch() {
   gulp.watch(paths.html.dest).on('change', browsersync.reload)
   gulp.watch('src/**/*.scss', gulp.parallel(styles))
   gulp.watch(paths.scripts.src, scripts)
+  gulp.watch(paths.scripts.src, libs)
   gulp.watch(paths.images.src, img)
   gulp.watch(paths.html.src, html)
   gulp.watch(paths.fonts.src, fonts)
