@@ -1,0 +1,28 @@
+.aside-menu {
+  padding: 109px 32px 0 43px;
+  border-right: $border;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: calc((14px * 4) / 100);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    transition: color ease .3s;
+
+    &_current {
+      color: $accentColor;
+    }
+
+    &:hover {
+      color: $accentColor;
+    }
+  }
+}

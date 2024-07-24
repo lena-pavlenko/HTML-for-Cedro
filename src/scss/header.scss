@@ -1,6 +1,6 @@
 .header {
-  padding: 24px 0;
-  border-bottom: 1px solid rgb(228, 228, 228);
+  padding: 20px 0;
+  border-bottom: $border;
 
   &__content {
     display: flex;
@@ -16,10 +16,18 @@
 }
 
 .logo {
+  transition: opacity ease .3s;
 
   img {
-    max-width: 100%;
+    width: 100%;
     display: block;
+  }
+
+  &:hover {
+
+    img {
+      opacity: 0.72;
+    }
   }
 }
 
@@ -29,12 +37,19 @@
   gap: 12px;
   margin-right: 1px;
   text-decoration: none;
-  color: #d0bc7a;
-  line-height: 0.6;
+  color: $accentColor;
+  line-height: 1.7;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: .04em;
+  letter-spacing: calc((14px * 4) / 100);
   text-transform: uppercase;
+  stroke: $accentColor;
+  transition: all ease .3s;
+
+  &:hover {
+    stroke: $mainTextColor;
+    color: $mainTextColor;
+  }
 }
 
 .personal-block {
@@ -42,6 +57,23 @@
   align-items: center;
   gap: 20px;
   padding: 0 11px 0 9px;
+  transition: all ease .3s;
+
+  &__favor {
+    stroke: $accentColor;
+
+    &:hover {
+      stroke: $mainTextColor;
+    }
+  }
+
+  &__user {
+    fill: $accentColor;
+
+    &:hover {
+      fill: $mainTextColor;
+    }
+  }
 }
 
 .menu-btn {
@@ -53,6 +85,7 @@
   width: 20px;
   height: 7.5px;
   cursor: pointer;
+  transition: all ease .3s;
 
   &::after {
     @include menuBtnLines;
@@ -64,5 +97,12 @@
     @include menuBtnLines;
     bottom: 0;
     left: 0;
+  }
+
+  &:hover {
+
+    &::before, &::after {
+      background-color: $accentColor;
+    }
   }
 }

@@ -39,10 +39,58 @@
       </div>
     </header>
     <main class="main">
-      
       <div class="container">
+        <div class="main__content">
 
+          <aside class="aside-menu">
+            <div class="aside-menu__list">
+              <a href="#" class="aside-menu__link aside-menu__link_current">Профиль</a>
+              <a href="#" class="aside-menu__link">Мои заказы</a>
+              <a href="#" class="aside-menu__link">выход</a>
+            </div>
+          </aside>
+
+          <section class="profile-section">
+
+            <div class="profile-section__block">
+              <h1 class="title title_h1">Профиль</h1>
+            </div>
+
+            <div class="profile-section__block">
+              
+              <form method="post" class="form-block">
+
+                <h2 class="form-block__title">Данные профиля</h2>
+
+                <fieldset class="form-field">
+                  <label for="userFio" class="form-field__label">ФИО</label>
+                  <input type="text" class="form-field__input" id="userFio" name="fio" placeholder="Алексеева Ульяна Евгеньевна">
+                </fieldset>
+
+                <fieldset class="form-field">
+                  <label for="userMail" class="form-field__label">Почта</label>
+                  <input type="email" class="form-field__input" id="userMail" name="mail" placeholder="+7 (999) 999-99-99">
+                </fieldset>
+
+                <fieldset class="form-field">
+                  <label for="userMaPhone" class="form-field__label">Телефон</label>
+                  <input type="tel" class="form-field__input" id="userPhone" name="phone" placeholder="pochta07@mail.ru">
+                </fieldset>
+
+              </form>
+
+            </div>
+
+            <div class="profile-section__block">
+              <button class="button" type="button">Сохранить изменения</button>
+            </div>
+
+          </section>
+        </div>
+        
       </div>
+      
+      </section>
     </main>
   </div>
   <script src="js/main.js"></script>
