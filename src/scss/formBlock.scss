@@ -4,6 +4,15 @@
     margin: 0 0 48px;
     font-size: 24px;
     line-height: 1;
+
+    @media(max-width: $tabletMedia) {
+      margin: 0 0 40px;
+    }
+
+    @media(max-width: $mobileMedia) {
+      font-size: 20px;
+      margin: 0 0 32px;
+    }
   }
 }
 
@@ -17,8 +26,16 @@
   width: 100%;
   max-width: 544px;
 
+  @media(max-width: $mobileMedia) {
+    gap: 8px;
+  }
+
   &:not(.form-field:last-child) {
     margin-bottom: 26px;
+
+    @media(max-width: $mobileMedia) {
+      margin-bottom: 16px;
+    }
   }
 
   &__label {

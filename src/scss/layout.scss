@@ -12,18 +12,40 @@ html {
 
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   color: $mainTextColor;
   font-size: 16px;
   overflow-x: hidden;
   min-width: 320px;
+
+  &.no-scroll {
+    overflow: hidden;
+    padding-right: var(--widthScrollBar);
+
+    @media(max-width: $mobileMedia) {
+      padding-right: 0;
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .wrapper {
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .main {
@@ -74,8 +96,20 @@ body {
   line-height: 1;
   text-transform: uppercase;
 
+  @media(max-width: $mobileMedia) {
+    line-height: 1.1;
+  }
+
   &_h1 {
     font-size: 80px;
+
+    @media(max-width: $tabletMedia) {
+      font-size: 50px;
+    }
+
+    @media(max-width: $mobileMedia) {
+      font-size: 35px;
+    }
   }
 }
 
@@ -86,17 +120,22 @@ body {
   line-height: 1.2;
   text-transform: uppercase;
 
+  @media(max-width: $tabletMedia) {
+    font-size: 32px;
+  }
+
+  @media(max-width: $mobileMedia) {
+    font-size: 28px;
+  }
+
   &__color {
     color: $accentColor;
   }
 }
 
-
-
 .button {
   padding: 0;
   border: none;
-  outline: none;
   width: 231px;
   height: 56px;
   display: flex;
@@ -118,5 +157,10 @@ body {
 
   &:active {
     background: rgb(208 188 122 / 50%);
+  }
+
+  @media(max-width: $mobileMedia) {
+    height: 48px;
+    width: 100%;
   }
 }

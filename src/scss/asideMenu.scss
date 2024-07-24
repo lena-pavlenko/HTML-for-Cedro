@@ -2,10 +2,27 @@
   padding: 109px 32px 0 43px;
   border-right: $border;
 
+  @media(max-width: $tabletMedia) {
+    padding: 80px 16px 0;
+  }
+
+  @media(max-width: $mobileMedia) {
+    border-right: none;
+    border-bottom: $border;
+    padding: 8px 0;
+    margin: 0 -16px;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
     gap: 6px;
+
+    @media(max-width: $mobileMedia) {
+      flex-direction: row;
+      gap: 16px;
+      padding: 0 16px;
+    }
   }
 
   &__link {
@@ -16,6 +33,14 @@
     text-decoration: none;
     color: inherit;
     transition: color ease .3s;
+
+    &:last-child {
+
+      @media(max-width: $mobileMedia) {
+        margin-left: auto;
+        margin-right: 4px;
+      }
+    }
 
     &_current {
       color: $accentColor;

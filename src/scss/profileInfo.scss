@@ -1,20 +1,36 @@
 .profile-info {
   border-bottom: $border;
-
+  overflow-x: hidden;
+  
   &__row {
     display: grid;
     grid-template-columns: 235px 1fr;
     height: 100%;
+
+    @media(max-width: $mobileMedia) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 .profile-section {
   padding: 32px 0 0;
   
+  @media(max-width: $mobileMedia) {
+    padding: 16px 0;
+  }
 
   &__block {
     padding: 80px 0 80px 96px;
     position: relative;
+
+    @media(max-width: $tabletMedia) {
+      padding: 32px 0 32px 32px;
+    }
+
+    @media(max-width: $mobileMedia) {
+      padding: 16px 0;
+    }
 
     &::after {
       content: '';
@@ -23,6 +39,10 @@
       border-bottom: $border;
       left: 0;
       width: 100vw;
+
+      @media(max-width: $mobileMedia) {
+        display: none;
+      }
     }
 
     &:last-child {
