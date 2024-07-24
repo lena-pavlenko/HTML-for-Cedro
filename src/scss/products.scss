@@ -1,8 +1,13 @@
 .products {
   padding: 112px 0;
 
+  .container {
+    padding-right: 0;
+  }
+
   &__content {
     padding-left: 43px;
+    position: relative;
   }
 
   &__row {

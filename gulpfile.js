@@ -128,7 +128,7 @@ function watch() {
   gulp.watch(paths.ico.src, ico)
 }
 
-const build = gulp.series(clean, gulp.parallel(html, styles, scripts, img, fonts, ico, sprite), watch);
+const build = gulp.series(clean, gulp.parallel(html, styles, scripts, img, fonts, ico, sprite, libs), watch);
 
 function clean() {
   return del(['dist'])
