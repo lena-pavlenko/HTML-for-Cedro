@@ -19,6 +19,7 @@ window.onload = () => {
     }
   });
 
+  // Функция, которая возвращает ширину скроллбара на странице
   const widthOfPageScrollBar = () => {
     const div = document.createElement('div');
 
@@ -34,19 +35,19 @@ window.onload = () => {
     return scrollWidth;
   }
 
-  const openMenu = (target) => {
+  // Управление меню
+  const handlerMenu = (target) => {
     target.classList.toggle('open')
     target.closest('.header').classList.toggle('open-menu')
     target.nextElementSibling.classList.toggle('open')
     target.closest('body').classList.toggle('no-scroll')
 
     target.closest('body').style.setProperty('--widthScrollBar', `${widthOfPageScrollBar()}px`);
-    
   }
 
   document.addEventListener('click', (e) => {
     if (e.target.closest('.menu-btn')) {
-      openMenu(e.target.closest('.menu-btn'))
+      handlerMenu(e.target.closest('.menu-btn'))
     }
   })
 }
