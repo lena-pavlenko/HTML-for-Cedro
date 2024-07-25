@@ -1,5 +1,8 @@
 # HTML For Cedro
 
+## Демо
+[Посмотреть демо](http://html-for-cedro.mydevstand.ru/)
+
 ## Описание
 Верстка страницы по макету Figma
 
